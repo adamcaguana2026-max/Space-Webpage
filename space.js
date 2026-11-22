@@ -1,26 +1,47 @@
-var person = "Friend";
-console.log("Hello " + person + "!");  
-var greeting = "Welcome to my website!";
-console.log(greeting);
-person  = "Explorer";
-greeting = "Explore the wonders of my website, " + person + "!";
-console.log(greeting);
-person = "Visitor";
-console.log("Enjoy your stay, " + person + "!");
-console.log("Thank you for visiting my website, " + person + "!");
-console.log(3*3*9*3);
-console.log(49/24);
-console.log(4/10 == 2/5);
-var result= 1599;
-if (result > 1600) {
-    console.log("HOW DID YOU EVEN MANGE TO GET THIS HIGH OF A SCORE, THATS NOT EVEN POSSIBLE?" );
-} else if (result == 1600) {
-    console.log("You scored exactly 1600, which is the highest possible score on the SAT! You are a genius and can apply to MIT!");
-} else if (result > 1000) {
-    console.log("Congratulations! You can apply to MIT!");
-} else {
-    console.log("Sorry, you cannot apply to MIT, better luck next time on the SAT!");
+
+if (document.body) {
+    document.body.style.backgroundImage = "url('luna.JPEG')";
 }
-for (var i = 0; i < 5; i++) {
-    console.log(i);
+
+function checkAnswer(questionNumber, answer) {
+    const resultElement = document.getElementById("result" + questionNumber);
+    if (!resultElement) return;
+
+    if (questionNumber === 1) {
+        resultElement.textContent = answer === "Mars" ? "Correct!" : "Incorrect! Try again!";
+    } else if (questionNumber === 2) {
+        resultElement.textContent = answer === "0 moons" ? "Correct!" : "Incorrect! Try again!";
+    } else if (questionNumber === 3) {
+        resultElement.textContent = answer === "True" ? "Correct!" : "Incorrect! Try again!";
+    } else if (questionNumber === 4) {
+        resultElement.textContent = answer === "Jupiter" ? "Correct!" : "Incorrect! Try again!";
+    }
+}
+function checkDropdownAnswer() {
+    const answer = document.getElementById("planetAnswer").value;
+    const result = document.getElementById("dropdownResult");
+    if (!result) return;
+    result.textContent = answer === "Venus" ? "Correct!" : "Incorrect! Try again!";
+}
+
+function checkTextAnswer() {
+    const answer = document.getElementById("textAnswer").value;
+    const result = document.getElementById("textResult");
+    if (!result) return;
+    result.textContent = answer === "5" ? "Correct!" : "Incorrect! Try again!";
+}
+
+function convertToKm() {
+    const auInput = document.getElementById("auInput");
+    const result = document.getElementById("auResult");
+    if (!auInput || !result) return;
+
+    const auValue = Number(auInput.value);
+    if (Number.isNaN(auValue)) {
+        result.textContent = "Please enter a number in AU.";
+        return;
+    }
+
+    const kmValue = auValue * 149597870.7;
+    result.textContent = auValue + " AU = " + kmValue.toFixed(2) + " km";
 }
