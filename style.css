@@ -1,0 +1,720 @@
+body {
+    margin: 0;
+    padding: 30px 20px 60px;
+    font-family: Arial, sans-serif;
+    background-image: url("luna.JPEG");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    cursor: url("data:image/png;base64,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") 16 17, auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+.page-title-button {
+    display: table;
+    position: relative;
+    top: 12px;
+    margin: 0 auto 20px;
+    padding: 8px 20px;
+    font-size: clamp(3rem, 5vw, 1.8rem);
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #d938d9;
+    color: white;
+    font-family: "Oswald", "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    transform-origin: center;
+}
+#pro4 {
+    display: table;
+    position: relative;
+    top: 60px;
+    margin: 0 auto 20px;
+    padding: 8px 20px;
+    font-size: clamp(3rem, 5vw, 1.8rem);
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #d938d9;
+    color: white;
+    font-family: "Oswald", "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    transform-origin: center;
+}
+
+#pro4:hover,
+.page-title-button:hover {
+    transform: scale(1.04);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+}
+
+.about-page h1,
+.about-page h2 {
+    display: table;
+    max-width: 100%;
+    padding: 8px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #176b3a;
+    color: white;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.about-page h1:hover,
+.about-page h2:hover {
+    background: #f07818;
+}
+
+.button-heading {
+    text-align: left;
+    margin: 12px 0 18px;
+}
+
+.button-heading a {
+    display: inline-block;
+    background: #143b94;
+    color: white;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 10px 22px;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button-heading a:hover {
+    background: #d938d9;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 18px 0 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    padding: 10px;
+    z-index: 1000;
+}
+.site-navigation .navigation-button {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: #9f1239;
+    color: white;
+    font-family: "Oswald", "Trebuchet MS", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.site-navigation .navigation-button:hover {
+    background: #dc2626;
+    transform: scale(1.04);
+    z-index: 1;
+    text-decoration: none;
+}
+
+#max,
+#promax,
+#promax2,
+#promax3,
+#promax4,
+#promax5,
+#pro5,
+#proultra2,
+#proultra3,
+#proultra4,
+#proultra5,
+#proultra6,
+p:not([id]),
+#dropdownResult,
+#textResult,
+#result1,
+#result2,
+#result3,
+#result4,
+#auResult {
+    display: inline-block;
+    background: rgba(20, 59, 148, 0.9);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 14px 18px;
+    margin: 8px 0 18px;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+    max-width: 900px;
+    font-size: 18px;
+}
+a {
+    color: #ffe1ee;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+button {
+    display: inline-block;
+    background-color: #143b94;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 18px;
+    margin: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #d938d9;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: block;
+}
+
+#hugediv {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#hugediv2 {
+    flex: 1;
+}
+
+.mercury-table-wrap {
+    flex: 0 1 540px;
+}
+
+.moon-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 48%);
+    grid-template-rows: auto auto;
+    column-gap: 24px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.dwarf-entry h2,
+.planet-heading {
+    display: table;
+    justify-self: center;
+    padding: 8px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #5b2c86;
+    color: white;
+    font-family: "Oswald", "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.dwarf-entry h2:hover,
+.planet-heading:hover {
+    background: #8f1748;
+}
+
+.moon-entry p {
+    grid-column: 1;
+    grid-row: 2;
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    font-size: 17.6px;
+    margin-top: 0;
+}
+
+.moon-entry #promax,
+.moon-entry #promax2,
+.moon-entry #promax3,
+.moon-entry #promax4,
+.moon-entry #promax5 {
+    margin-top: 0;
+}
+
+.moon-entry .image-box {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    width: 100%;
+}
+
+.moon-entry img {
+    margin-left: auto;
+}
+
+.dwarf-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 48%);
+    grid-template-rows: auto auto;
+    column-gap: 24px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.dwarf-entry h2 {
+    grid-column: 1 / -1;
+}
+
+.dwarf-entry p {
+    grid-column: 1;
+    grid-row: 2;
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    margin-top: 0;
+}
+
+.dwarf-entry #proultra2,
+.dwarf-entry #proultra3,
+.dwarf-entry #proultra4,
+.dwarf-entry #proultra5,
+.dwarf-entry #proultra6 {
+    margin-top: 0;
+}
+
+.planet-description {
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    font-size: 17.6px;
+}
+
+.planet-description,
+.moon-entry p,
+.dwarf-entry p {
+    position: relative;
+    z-index: 0;
+    transform-origin: center;
+}
+
+.planet-description:hover,
+.moon-entry p:hover,
+.dwarf-entry p:hover {
+    z-index: 1;
+    transform: scale(1.025);
+}
+
+.dwarf-entry .image2-box,
+.dwarf-entry .image3-box {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    width: 100%;
+}
+
+.dwarf-entry img {
+    margin-left: auto;
+}
+#planet-table,
+#planet-table th,
+#planet-table td {
+    border: 3px solid white;
+    padding: 10px;
+    border-collapse: collapse;
+    margin: 18px 0;
+    background: #f5d547;
+    color: #143b94;
+    font-family: "Oswald", "Trebuchet MS", sans-serif;
+    width: 800px;
+}
+#photo {
+    display: block;
+    margin: 0 auto 20px;
+    border: 3px solid white;
+    border-radius: 12px;
+}
+
+select,
+input[type="text"] {
+    width: min(100%, 320px);
+    padding: 10px 12px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #143b94;
+}
+
+.space-box {
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid white;
+    padding: 12px 16px;
+    max-width: 360px;
+    margin: 20px 0;
+}
+
+.quiz-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    align-items: start;
+    gap: 28px;
+    width: min(100%, 1360px);
+    margin: 0;
+}
+
+.quiz-questions h2 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.quiz-page h2 {
+    display: table;
+    max-width: 100%;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: #050505;
+    color: #35e7f2;
+    transform-origin: left center;
+    transition: transform 0.15s ease;
+}
+
+.quiz-page h2:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+.quiz-page h1 {
+    display: table;
+    max-width: 100%;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: #c62828;
+    color: #35e7f2;
+    transform-origin: left center;
+    transition: transform 0.15s ease;
+}
+
+.quiz-page h1:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+.quiz-sidebar {
+    min-width: 0;
+}
+
+.quiz-sidebar .space-box {
+    max-width: none;
+    margin-top: 18px;
+}
+
+.quiz-page .blackhole-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    width: 100%;
+    margin: 18px 0 0;
+    padding: 14px;
+    background: rgba(0, 0, 0, 0.28);
+    border: 2px solid white;
+}
+
+.quiz-page #blackholeimg {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.quiz-page .blackhole-info {
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    padding: 16px;
+}
+
+.calculator-panel {
+    width: min(100%, 1360px);
+    margin: 24px 0;
+}
+
+.calculator-panel h2 {
+    text-align: left;
+    margin-left: 0;
+}
+
+#calculator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+.page-title-button {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* This sets up a 2-column layout so you can easily fit 3 on top and 2 on the bottom */
+.dwarfs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dwarf-entry {
+    background: #1a1a1a;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+/* Make the first item (Pluto) span across both columns if you want it centered on top, 
+   or leave it standard. Here it sits nicely in the grid. */
+
+.dwarf-entry h2 {
+    margin-top: 0;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.dwarf-entry p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.dwarf-entry img {
+    border-radius: 4px;
+    margin-top: 10px;
+}
+#adamid {
+    display: inline-block;
+    background: #143b94;
+    color: white;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 10px 22px;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+#adamid:hover {
+    background: #dc2626;
+    transform: scale(1.04);
+    z-index: 1;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px 14px 40px;
+    }
+
+    #hugediv {
+        flex-direction: column;
+    }
+
+    .mercury-table-wrap {
+        margin-left:auto;
+    }
+
+    .moon-entry {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .moon-entry .image-box {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .dwarf-entry {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .dwarf-entry .image2-box,
+    .dwarf-entry .image3-box {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .quiz-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+}
+.main-layout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.left-column {
+    flex: 1;
+}
+.right-column {
+    flex: 1;
+}
+@media (max-width: 768px) {
+    .main-layout-container {
+        flex-direction: column;
+    }
+}
+#mercury-image {
+    position: absolute;
+    left: 850px;
+    top: 850px;
+}
+#venus-image {
+    position: absolute;
+    left: 850px;
+    top: 1600px;
+}
+#earth-image {
+    position: absolute;
+    left: 850px;
+    top: 2318.3px;
+}
+#mars-image {
+    position: absolute;
+    left: 850px;
+    top: 3033.3px;
+}
+#jupiter-image {
+    position: absolute;
+    left: 850px;
+    top: 3765.3px;
+}
+#saturn-image {
+    position: absolute;
+    left: 876.6px;
+    top: 4450.3px;
+    height: 575.5px;
+    width: 520px;
+}
+#uranus-image {
+    position: absolute;
+    left: 862.4px;
+    top: 5130.3px;
+    width: 550px;
+    height: 606.99px;
+}
+#neptune-image {
+    position: absolute;
+    left: 864px;
+    top: 5868.3px;
+    width: 550px;
+    height: 550px;
+}
+#sun-image {
+    position: absolute;
+    left: 860px;
+    top: 6582px;
+    width: 550px;
+    height: 550px;
+}
+
+.space-hero-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin: -30px -20px 0 -20px; /* Pulls it flush with your body padding */
+}
+
+.space-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.space-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    color: #ffffff;
+}
+
+.space-hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+}
+
+.space-section-divider {
+    border: none;
+    height: 6px;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    margin: 0 -20px;
+}
+
+.space-hyperlink-footer {
+    background-color: #05050a;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 -20px -60px -20px; /* Balances out your body's bottom padding */
+}
+
+.space-hyperlink-footer nav a {
+    color: #a0aec0;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.space-hyperlink-footer nav a:hover {
+    color: #00f2fe;
+    text-decoration: underline;
+}
+h2 {
+    width: 167px;
+    text-align: center;
+     display: inline-block;
+    padding: 10px 18px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: #ff5500;
+    color: white;
+    font-family: "Oswald", "Trebuchet MS", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+h2:hover {
+    background: #dc2626;
+    transform: scale(1.04);
+    z-index: 1;
+    text-decoration: none;
+}
